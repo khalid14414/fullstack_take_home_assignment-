@@ -1,0 +1,12 @@
+{
+  "name": "take-home-fullstack",
+  "private": true,
+  "scripts": {
+    "install:all": "npm install --prefix api && npm install --prefix app",
+    "dev": "concurrently \"npm run dev --prefix api\" \"npm run dev --prefix app\"",
+    "start": "npm run install:all && npm run build --prefix app && npm run start --prefix api"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  }
+}
